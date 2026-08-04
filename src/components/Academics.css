@@ -1,0 +1,132 @@
+.academics {
+  background: #f8f9fc;
+}
+
+.acad-summary {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.acad-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.acad-num {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  line-height: 1;
+}
+
+.acad-desc {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.acad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Courses */
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.course-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-bottom: 1px solid #f0f1f4;
+  transition: background 0.15s;
+}
+
+.course-row:last-child {
+  border-bottom: none;
+}
+
+.course-row:hover {
+  background: #f8f9fc;
+}
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.course-name {
+  font-size: 0.95rem;
+  color: #1a2a4a;
+  font-weight: 600;
+}
+
+.course-semester {
+  font-size: 0.78rem;
+  color: #aaa;
+}
+
+.course-grade {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e8b84b;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* Honors */
+.honors-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.honor-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.honor-title {
+  font-size: 0.95rem;
+  color: #1a2a4a;
+  font-weight: 600;
+}
+
+.honor-year {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .acad-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .acad-summary {
+    gap: 2rem;
+  }
+}

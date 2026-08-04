@@ -1,0 +1,24 @@
+.footer {
+  background: #0a1428;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-name {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  margin: 0;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  margin: 0;
+}

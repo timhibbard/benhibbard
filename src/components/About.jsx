@@ -1,0 +1,58 @@
+import './About.css';
+
+export default function About() {
+  return (
+    <section id="about" className="about section">
+      <div className="container">
+        <div className="section-label">About Me</div>
+        <h2 className="section-title">A Driven Student-Athlete</h2>
+        <div className="about-grid">
+          <div className="about-text">
+            <p>
+              Hi, I&apos;m Ben Hibbard — a junior distance runner at Westside High School in Omaha,
+              Nebraska. I compete in cross country and track & field, specializing in the 1600m
+              and 3200m events. Running has taught me discipline, resilience, and the importance
+              of consistent hard work both on the track and in the classroom.
+            </p>
+            <p>
+              Outside of running, I&apos;m passionate about mathematics and computer science. I&apos;m
+              actively involved in my school&apos;s STEM club and enjoy problem-solving challenges
+              that push my thinking. I&apos;m looking to compete at the NCAA Division I or II level
+              while pursuing a degree in engineering or computer science.
+            </p>
+            <p>
+              I&apos;m seeking a program that values both athletic excellence and academic rigor —
+              a place where I can continue to grow as a runner and as a student.
+            </p>
+          </div>
+          <div className="about-facts">
+            <div className="fact-item">
+              <span className="fact-label">Graduation Year</span>
+              <span className="fact-value">2026</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-label">High School</span>
+              <span className="fact-value">Westside High School</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-label">Location</span>
+              <span className="fact-value">Omaha, Nebraska</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-label">Events</span>
+              <span className="fact-value">1600m · 3200m · XC</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-label">Academic Interest</span>
+              <span className="fact-value">Engineering / CS</span>
+            </div>
+            <div className="fact-item">
+              <span className="fact-label">Division Interest</span>
+              <span className="fact-value">NCAA D1 / D2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
