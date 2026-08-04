@@ -1,0 +1,157 @@
+.athletics {
+  background: #fff;
+}
+
+.pr-block,
+.seasons-block,
+.training-block {
+  margin-bottom: 3.5rem;
+}
+
+.block-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e8b84b;
+  display: inline-block;
+}
+
+/* PRs */
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.pr-card {
+  background: #f8f9fc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pr-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pr-event {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  font-weight: 600;
+}
+
+.pr-time {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  line-height: 1.1;
+}
+
+.pr-meta {
+  font-size: 0.78rem;
+  color: #aaa;
+  margin-top: 0.2rem;
+}
+
+/* Seasons */
+.seasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.season-card {
+  background: #f8f9fc;
+  border-radius: 14px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.season-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2a4a;
+  margin-bottom: 1rem;
+}
+
+.season-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.season-list li {
+  font-size: 0.9rem;
+  color: #555;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.season-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #e8b84b;
+  font-size: 0.85rem;
+}
+
+/* Training */
+.training-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.training-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.t-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e8b84b;
+  line-height: 1;
+}
+
+.t-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .pr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seasons-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .pr-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .training-stats {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
