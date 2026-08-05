@@ -180,7 +180,7 @@ export default function Contact() {
                       type="text"
                       value={form.school}
                       onChange={handleChange}
-                      placeholder="Clemson University"
+                      placeholder="University or program name"
                       required
                     />
                   </div>
