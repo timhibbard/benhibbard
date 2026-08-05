@@ -10,9 +10,10 @@ export default function About() {
           <div className="about-text">
             <p>
               Hi, I&apos;m Ben Hibbard — a distance runner at J.L. Mann High School in Greenville,
-              South Carolina. I compete in cross country and track &amp; field, specializing in the
-              1500m, 1600m, and 3200m events. Running has taught me discipline, resilience, and
-              the importance of consistent hard work both on the track and in the classroom.
+              South Carolina. I compete in cross country and track &amp; field: the 5K on the
+              course, and the 1600m and 3200m on the track. Running has taught me discipline,
+              resilience, and the importance of consistent hard work both on the track and in
+              the classroom.
             </p>
             <p>
               In the classroom I carry a demanding schedule — three AP courses and six Honors
@@ -41,7 +42,7 @@ export default function About() {
             </div>
             <div className="fact-item">
               <span className="fact-label">Events</span>
-              <span className="fact-value">1500m · 1600m · 3200m · XC</span>
+              <span className="fact-value">1600m · 3200m · 5K XC</span>
             </div>
             <div className="fact-item">
               <span className="fact-label">Academic Interest</span>

@@ -58,7 +58,7 @@ const seasons = [
       'Qualified for Nike Cross Nationals Southeast Regional — 13th',
       '20th at the Region 1-5A Championship',
       '35th at the Ed Boehmke Greenville County Championships',
-      'Cut 18+ seconds off his 5K from the prior season',
+      'Cut 18+ seconds off my 5K from the prior season',
     ],
   },
 ];
