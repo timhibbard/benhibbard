@@ -20,7 +20,7 @@ const primaryRecords = [
     time: '16:29.49',
     meet: 'Woodmont Invitational',
     year: '2025',
-    note: 'NXR Southeast qualifier',
+    note: '5A D1 state champion team',
   },
 ];
 
@@ -54,8 +54,8 @@ const seasons = [
   {
     season: 'Cross Country 2025',
     highlights: [
+      'Won the SCHSL 5A Division 1 team state championship with J.L. Mann',
       '5K PR of 16:29.49 at the Woodmont Invitational',
-      'Qualified for Nike Cross Nationals Southeast Regional — 13th',
       '20th at the Region 1-5A Championship',
       '35th at the Ed Boehmke Greenville County Championships',
       'Cut 18+ seconds off my 5K from the prior season',
