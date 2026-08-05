@@ -18,7 +18,7 @@
 .acad-num {
   font-size: 3rem;
   font-weight: 700;
-  color: #1a2a4a;
+  color: #0c7eff;
   line-height: 1;
 }
 
@@ -71,7 +71,7 @@
 
 .course-name {
   font-size: 0.95rem;
-  color: #1a2a4a;
+  color: #0c7eff;
   font-weight: 600;
 }
 
@@ -83,7 +83,7 @@
 .course-grade {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #e8b84b;
+  color: #ff0000;
   min-width: 36px;
   text-align: right;
 }
@@ -110,7 +110,7 @@
 
 .honor-title {
   font-size: 0.95rem;
-  color: #1a2a4a;
+  color: #0c7eff;
   font-weight: 600;
 }
 
