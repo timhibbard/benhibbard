@@ -11,10 +11,10 @@
 .block-heading {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1a2a4a;
+  color: #0c7eff;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e8b84b;
+  border-bottom: 2px solid #ff0000;
   display: inline-block;
 }
 
@@ -54,7 +54,7 @@
 .pr-time {
   font-size: 2rem;
   font-weight: 700;
-  color: #1a2a4a;
+  color: #0c7eff;
   line-height: 1.1;
 }
 
@@ -81,7 +81,7 @@
 .season-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #1a2a4a;
+  color: #0c7eff;
   margin-bottom: 1rem;
 }
 
@@ -105,7 +105,7 @@
   content: '→';
   position: absolute;
   left: 0;
-  color: #e8b84b;
+  color: #ff0000;
   font-size: 0.85rem;
 }
 
@@ -125,7 +125,7 @@
 .t-num {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #e8b84b;
+  color: #ff0000;
   line-height: 1;
 }
 
