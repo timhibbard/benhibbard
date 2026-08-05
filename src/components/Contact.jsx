@@ -117,6 +117,28 @@ export default function Contact() {
                 View Profile →
               </a>
             </div>
+            <div className="contact-item">
+              <span className="ci-label">Strava</span>
+              <a
+                href="https://www.strava.com/athletes/112947404"
+                target="_blank"
+                rel="noreferrer"
+                className="ci-value ci-link"
+              >
+                Follow Training →
+              </a>
+            </div>
+            <div className="contact-item">
+              <span className="ci-label">Instagram</span>
+              <a
+                href="https://www.instagram.com/ben.hibbard20/"
+                target="_blank"
+                rel="noreferrer"
+                className="ci-value ci-link"
+              >
+                @ben.hibbard20 →
+              </a>
+            </div>
           </div>
 
           <div className="contact-form-wrap">

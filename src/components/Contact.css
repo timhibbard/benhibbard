@@ -44,24 +44,26 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #aaa;
+  color: #6b7280;
   font-weight: 600;
 }
 
 .ci-value {
   font-size: 0.95rem;
-  color: #0c7eff;
+  color: #0a2540;
   font-weight: 600;
   text-decoration: none;
 }
 
+/* Links use the darker blue rather than #ff0000, which measured only
+   3.80:1 on this panel's background. */
 .ci-link {
-  color: #ff0000;
-  transition: opacity 0.2s;
+  color: #0a6fe0;
+  transition: color 0.2s;
 }
 
 .ci-link:hover {
-  opacity: 0.8;
+  color: #c81e1e;
 }
 
 /* Form */
