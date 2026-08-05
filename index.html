@@ -5,6 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>benhibbard</title>
+
+    <!-- Google Analytics 4. The measurement ID is public by design — it ships
+         in the HTML of every GA-instrumented site — so it lives here rather
+         than in a build secret. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV8QTPZ6E5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-TV8QTPZ6E5');
+    </script>
   </head>
   <body>
     <div id="root"></div>
