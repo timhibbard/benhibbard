@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+# Allow GITHUB_TOKEN to deploy to Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a queued run supersede an in-progress one, but never cancel a
+# deployment that is already publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Vite 8 requires ^20.19.0 || >=22.12.0
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        env:
+          # Comma-separated Web3Forms access keys, one per recipient inbox.
+          # Vite inlines VITE_-prefixed vars into the client bundle, so this
+          # value is public in the built JS by design — a Web3Forms access key
+          # can only send mail to its own verified inbox and cannot read data.
+          VITE_WEB3FORMS_KEYS: ${{ secrets.VITE_WEB3FORMS_KEYS }}
+        run: npm run build
+
+      - name: Add CNAME for the custom domain
+        run: cp CNAME dist/CNAME
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
