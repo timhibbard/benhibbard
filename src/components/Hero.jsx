@@ -1,4 +1,3 @@
-import heroImg from '../assets/hero.png';
 import './Hero.css';
 
 export default function Hero() {
@@ -8,26 +7,27 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
+      {/* To use a real photo: add it to src/assets, import it, and render
+          <img className="hero-img" /> inside .hero-bg above the overlay. */}
       <div className="hero-bg">
-        <img src={heroImg} alt="Ben Hibbard running" className="hero-img" />
         <div className="hero-overlay" />
       </div>
       <div className="hero-content">
-        <p className="hero-subtitle">Class of 2026 · Distance Runner</p>
+        <p className="hero-subtitle">Class of 2027 · Distance Runner</p>
         <h1 className="hero-name">Ben Hibbard</h1>
-        <p className="hero-school">Westside High School · Omaha, NE</p>
+        <p className="hero-school">J.L. Mann High School · Greenville, SC</p>
         <div className="hero-stats">
           <div className="stat-card">
-            <span className="stat-value">4:18</span>
-            <span className="stat-label">Mile PR</span>
+            <span className="stat-value">4:21.44</span>
+            <span className="stat-label">1600m</span>
           </div>
           <div className="stat-card">
-            <span className="stat-value">9:12</span>
-            <span className="stat-label">2-Mile PR</span>
+            <span className="stat-value">9:40.97</span>
+            <span className="stat-label">3200m</span>
           </div>
           <div className="stat-card">
-            <span className="stat-value">3.9</span>
-            <span className="stat-label">GPA</span>
+            <span className="stat-value">16:29.49</span>
+            <span className="stat-label">5K XC</span>
           </div>
         </div>
         <div className="hero-actions">

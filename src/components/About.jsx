@@ -9,10 +9,10 @@ export default function About() {
         <div className="about-grid">
           <div className="about-text">
             <p>
-              Hi, I&apos;m Ben Hibbard — a junior distance runner at Westside High School in Omaha,
-              Nebraska. I compete in cross country and track & field, specializing in the 1600m
-              and 3200m events. Running has taught me discipline, resilience, and the importance
-              of consistent hard work both on the track and in the classroom.
+              Hi, I&apos;m Ben Hibbard — a distance runner at J.L. Mann High School in Greenville,
+              South Carolina. I compete in cross country and track &amp; field, specializing in the
+              1500m, 1600m, and 3200m events. Running has taught me discipline, resilience, and
+              the importance of consistent hard work both on the track and in the classroom.
             </p>
             <p>
               Outside of running, I&apos;m passionate about mathematics and computer science. I&apos;m
@@ -28,19 +28,19 @@ export default function About() {
           <div className="about-facts">
             <div className="fact-item">
               <span className="fact-label">Graduation Year</span>
-              <span className="fact-value">2026</span>
+              <span className="fact-value">2027</span>
             </div>
             <div className="fact-item">
               <span className="fact-label">High School</span>
-              <span className="fact-value">Westside High School</span>
+              <span className="fact-value">J.L. Mann High School</span>
             </div>
             <div className="fact-item">
               <span className="fact-label">Location</span>
-              <span className="fact-value">Omaha, Nebraska</span>
+              <span className="fact-value">Greenville, South Carolina</span>
             </div>
             <div className="fact-item">
               <span className="fact-label">Events</span>
-              <span className="fact-value">1600m · 3200m · XC</span>
+              <span className="fact-value">1500m · 1600m · 3200m · XC</span>
             </div>
             <div className="fact-item">
               <span className="fact-label">Academic Interest</span>

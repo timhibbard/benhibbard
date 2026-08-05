@@ -1,37 +1,64 @@
 import './Athletics.css';
 
-const personalRecords = [
-  { event: '800m', time: '1:58.4', meet: 'Metro Conference', year: '2024' },
-  { event: '1600m (Mile)', time: '4:18.2', meet: 'State Qualifier', year: '2024' },
-  { event: '3200m (2-Mile)', time: '9:12.7', meet: 'Westside Invite', year: '2024' },
-  { event: '5K (XC)', time: '15:48', meet: 'State XC Meet', year: '2023' },
+const primaryRecords = [
+  {
+    event: '1600m',
+    time: '4:21.44',
+    meet: 'Region 1 — 5A Meet',
+    year: '2026',
+    note: 'Top 30% of D1 juniors',
+  },
+  {
+    event: '3200m',
+    time: '9:40.97',
+    meet: 'ASICS Carolina Distance Carnival',
+    year: '2026',
+    note: '48th in South Carolina',
+  },
+  {
+    event: '5K — Cross Country',
+    time: '16:29.49',
+    meet: 'Woodmont Invitational',
+    year: '2025',
+    note: 'NXR Southeast qualifier',
+  },
+];
+
+const otherRecords = [
+  { event: '1500m', time: '4:13.42', meet: 'Bojangles Blazer Twilight', year: '2026' },
+  { event: '1 Mile', time: '4:25.09', meet: 'ASICS Carolina Distance Carnival', year: '2026' },
+  { event: '3000m — Indoor', time: '9:36.03', meet: 'Eye of the Tiger Invitational', year: '2026' },
+  { event: '1 Mile — Indoor', time: '4:49.85', meet: 'Eye of the Tiger Invitational', year: '2026' },
+  { event: '800m', time: '2:16.17', meet: 'Mauldin Meet #2', year: '2025' },
 ];
 
 const seasons = [
   {
-    season: 'Cross Country 2024',
+    season: 'Outdoor Track 2026',
     highlights: [
-      'Metro Conference Champion',
-      '4th place at State XC Championships',
-      'Team Captain',
-      'All-Conference First Team',
+      '1500m PR of 4:13.42 — 11th in South Carolina',
+      '4th in the 1600m at the Region 1 — 5A Meet (4:21.44)',
+      '11th in the 1600m at the SCHSL 5A Division 1 State Championships',
+      '4th in the 1600m at SCHSL 5A — D1 Upper State',
+      'Competed at RunningLane Track Championships — 8th in the Mile',
     ],
   },
   {
-    season: 'Track & Field 2024',
+    season: 'Indoor Track 2026',
     highlights: [
-      'State Qualifier — 1600m & 3200m',
-      'Broke school record in 1600m (4:18.2)',
-      'All-Conference Second Team',
-      'Team MVP',
+      '3rd in the 3000m at the Eye of the Tiger Invitational (9:36.03)',
+      '6th in South Carolina — 3000m',
+      'Indoor Mile PR of 4:49.85',
     ],
   },
   {
-    season: 'Cross Country 2023',
+    season: 'Cross Country 2025',
     highlights: [
-      'All-Conference Honorable Mention',
-      '12th place at State XC Championships',
-      'Personal best 5K: 15:48',
+      '5K PR of 16:29.49 at the Woodmont Invitational',
+      'Qualified for Nike Cross Nationals Southeast Regional — 13th',
+      '20th at the Region 1-5A Championship',
+      '35th at the Ed Boehmke Greenville County Championships',
+      'Cut 18+ seconds off his 5K from the prior season',
     ],
   },
 ];
@@ -44,9 +71,21 @@ export default function Athletics() {
         <h2 className="section-title">On the Track &amp; Course</h2>
 
         <div className="pr-block">
-          <h3 className="block-heading">Personal Records</h3>
+          <h3 className="block-heading">Signature Events</h3>
+          <div className="pr-grid-featured">
+            {primaryRecords.map((pr) => (
+              <div key={pr.event} className="pr-card pr-card-featured">
+                <span className="pr-event">{pr.event}</span>
+                <span className="pr-time">{pr.time}</span>
+                <span className="pr-note">{pr.note}</span>
+                <span className="pr-meta">{pr.meet} · {pr.year}</span>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="block-heading pr-other-heading">Other Personal Records</h3>
           <div className="pr-grid">
-            {personalRecords.map((pr) => (
+            {otherRecords.map((pr) => (
               <div key={pr.event} className="pr-card">
                 <span className="pr-event">{pr.event}</span>
                 <span className="pr-time">{pr.time}</span>
@@ -76,16 +115,16 @@ export default function Athletics() {
           <h3 className="block-heading">Training</h3>
           <div className="training-stats">
             <div className="training-stat">
-              <span className="t-num">60–70</span>
-              <span className="t-label">Miles / Week (peak)</span>
-            </div>
-            <div className="training-stat">
               <span className="t-num">5</span>
-              <span className="t-label">Years of Experience</span>
+              <span className="t-label">Varsity Seasons</span>
             </div>
             <div className="training-stat">
-              <span className="t-num">3</span>
-              <span className="t-label">Varsity Seasons</span>
+              <span className="t-num">40+</span>
+              <span className="t-label">Races Contested</span>
+            </div>
+            <div className="training-stat">
+              <span className="t-num">25s</span>
+              <span className="t-label">1600m Improvement (2yr)</span>
             </div>
           </div>
         </div>

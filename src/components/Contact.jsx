@@ -1,17 +1,83 @@
 import { useState } from 'react';
 import './Contact.css';
 
+// One access key per recipient inbox. The free Web3Forms tier delivers to a single
+// verified address per key (`ccemail` is a paid feature), so we post to every key in
+// parallel and treat the submission as sent if at least one succeeds.
+const ACCESS_KEYS = (import.meta.env.VITE_WEB3FORMS_KEYS || '')
+  .split(',')
+  .map((k) => k.trim())
+  .filter(Boolean);
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({ name: '', school: '', email: '', message: '' });
+  // Honeypot: bots fill hidden fields, humans never see this one.
+  const [botcheck, setBotcheck] = useState('');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (botcheck) return;
+
+    if (ACCESS_KEYS.length === 0) {
+      setError(
+        'This form is not configured yet. Please email ben@benhibbard.com directly.',
+      );
+      return;
+    }
+
+    setSending(true);
+    setError('');
+
+    const payload = {
+      subject: `Recruiting inquiry from ${form.name}${form.school ? ` (${form.school})` : ''}`,
+      from_name: 'benhibbard.com',
+      replyto: form.email,
+      name: form.name,
+      school: form.school,
+      email: form.email,
+      message: form.message,
+    };
+
+    try {
+      const results = await Promise.allSettled(
+        ACCESS_KEYS.map((access_key) =>
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify({ ...payload, access_key }),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (!data.success) throw new Error(data.message || 'Submission failed');
+              return data;
+            }),
+        ),
+      );
+
+      if (results.some((r) => r.status === 'fulfilled')) {
+        setSubmitted(true);
+      } else {
+        setError(
+          'Something went wrong sending your message. Please email ben@benhibbard.com directly.',
+        );
+      }
+    } catch {
+      setError(
+        'Something went wrong sending your message. Please email ben@benhibbard.com directly.',
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -28,22 +94,22 @@ export default function Contact() {
           <div className="contact-info">
             <div className="contact-item">
               <span className="ci-label">Email</span>
-              <a href="mailto:ben.hibbard@example.com" className="ci-value">
-                ben.hibbard@example.com
+              <a href="mailto:ben@benhibbard.com" className="ci-value">
+                ben@benhibbard.com
               </a>
             </div>
             <div className="contact-item">
               <span className="ci-label">Location</span>
-              <span className="ci-value">Omaha, Nebraska</span>
+              <span className="ci-value">Greenville, South Carolina</span>
             </div>
             <div className="contact-item">
               <span className="ci-label">Grad Year</span>
-              <span className="ci-value">Spring 2026</span>
+              <span className="ci-value">Spring 2027</span>
             </div>
             <div className="contact-item">
               <span className="ci-label">MILESPLIT</span>
               <a
-                href="https://ne.milesplit.com"
+                href="https://sc.milesplit.com/athletes/15024264-ben-hibbard"
                 target="_blank"
                 rel="noreferrer"
                 className="ci-value ci-link"
@@ -61,6 +127,16 @@ export default function Contact() {
               </div>
             ) : (
               <form className="contact-form" onSubmit={handleSubmit}>
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden-honeypot"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  checked={Boolean(botcheck)}
+                  onChange={(ev) => setBotcheck(ev.target.checked ? 'bot' : '')}
+                />
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">Your Name</label>
@@ -82,7 +158,7 @@ export default function Contact() {
                       type="text"
                       value={form.school}
                       onChange={handleChange}
-                      placeholder="University of Nebraska"
+                      placeholder="Clemson University"
                       required
                     />
                   </div>
@@ -111,8 +187,13 @@ export default function Contact() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn-submit">
-                  Send Message
+                {error && (
+                  <p className="form-error" role="alert">
+                    {error}
+                  </p>
+                )}
+                <button type="submit" className="btn-submit" disabled={sending}>
+                  {sending ? 'Sending…' : 'Send Message'}
                 </button>
               </form>
             )}

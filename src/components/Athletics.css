@@ -18,13 +18,8 @@
   display: inline-block;
 }
 
-/* PRs */
-.pr-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-}
-
+/* PRs — base card. Defined BEFORE .pr-card-featured so the featured
+   variant's single-class overrides win on source order. */
 .pr-card {
   background: #f8f9fc;
   border: 1px solid #e5e7eb;
@@ -47,21 +42,78 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #888;
+  color: #6b7280;
   font-weight: 600;
 }
 
 .pr-time {
-  font-size: 2rem;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
   font-weight: 700;
-  color: #0c7eff;
-  line-height: 1.1;
+  color: #0a2540;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.5px;
 }
 
 .pr-meta {
   font-size: 0.78rem;
-  color: #aaa;
+  color: #6b7280;
   margin-top: 0.2rem;
+}
+
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+/* Featured "Signature Events" cards */
+.pr-grid-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.pr-card-featured {
+  background: #fff;
+  border: 1px solid #dfe3ea;
+  border-top: 4px solid #0c7eff;
+  border-radius: 14px;
+  padding: 1.9rem 1.4rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(10, 37, 64, 0.07);
+}
+
+.pr-card-featured:hover {
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.13);
+}
+
+.pr-card-featured .pr-event {
+  color: #0a6fe0;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.pr-card-featured .pr-time {
+  font-size: 3.4rem;
+  color: #0a2540;
+}
+
+.pr-note {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #c81e1e;
+  letter-spacing: 0.2px;
+  background: #fdeaea;
+  border-radius: 20px;
+  padding: 0.22rem 0.75rem;
+  margin-top: 0.15rem;
+}
+
+.pr-other-heading {
+  font-size: 1.05rem;
+  opacity: 0.75;
 }
 
 /* Seasons */
@@ -123,10 +175,12 @@
 }
 
 .t-num {
-  font-size: 2.5rem;
+  font-family: var(--font-display);
+  font-size: 2.9rem;
   font-weight: 700;
   color: #ff0000;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .t-label {
@@ -136,6 +190,14 @@
 }
 
 @media (max-width: 900px) {
+  .pr-grid-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .pr-card-featured {
+    padding: 1.6rem 1.4rem 1.3rem;
+  }
+
   .pr-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -147,7 +209,11 @@
 
 @media (max-width: 480px) {
   .pr-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .pr-card-featured .pr-time {
+    font-size: 2.6rem;
   }
 
   .training-stats {

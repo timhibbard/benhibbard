@@ -11,7 +11,7 @@ const courses = [
 
 const honors = [
   { title: 'National Honor Society', year: '2024–Present' },
-  { title: 'Nebraska Scholar Award', year: '2024' },
+  { title: 'South Carolina Palmetto Fellows Candidate', year: '2026' },
   { title: "Principal's Honor Roll", year: '2022–Present' },
   { title: 'STEM Club President', year: '2024–Present' },
   { title: 'Math Team — Regional Qualifier', year: '2023' },
