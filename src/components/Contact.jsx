@@ -9,6 +9,45 @@ const ACCESS_KEYS = (import.meta.env.VITE_WEB3FORMS_KEYS || '')
   .map((k) => k.trim())
   .filter(Boolean);
 
+// Brand marks from Simple Icons (CC0). MileSplit has no published mark, so it
+// gets a stopwatch — which is why every icon keeps a text caption underneath.
+const PROFILES = [
+  {
+    name: 'MileSplit',
+    title: 'MileSplit profile — official race results',
+    href: 'https://sc.milesplit.com/athletes/15024264-ben-hibbard',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <circle cx="12" cy="13.5" r="7.5" />
+        <path d="M12 9.5v4l2.5 2" strokeLinecap="round" />
+        <path d="M9.5 2.5h5M12 2.5V6" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Strava',
+    title: 'Strava — training log',
+    href: 'https://www.strava.com/athletes/112947404',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Instagram',
+    title: 'Instagram — @ben.hibbard20',
+    href: 'https://www.instagram.com/ben.hibbard20/',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+];
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -106,38 +145,25 @@ export default function Contact() {
               <span className="ci-label">Grad Year</span>
               <span className="ci-value">Spring 2027</span>
             </div>
-            <div className="contact-item">
-              <span className="ci-label">MILESPLIT</span>
-              <a
-                href="https://sc.milesplit.com/athletes/15024264-ben-hibbard"
-                target="_blank"
-                rel="noreferrer"
-                className="ci-value ci-link"
-              >
-                View Profile →
-              </a>
-            </div>
-            <div className="contact-item">
-              <span className="ci-label">Strava</span>
-              <a
-                href="https://www.strava.com/athletes/112947404"
-                target="_blank"
-                rel="noreferrer"
-                className="ci-value ci-link"
-              >
-                Follow Training →
-              </a>
-            </div>
-            <div className="contact-item">
-              <span className="ci-label">Instagram</span>
-              <a
-                href="https://www.instagram.com/ben.hibbard20/"
-                target="_blank"
-                rel="noreferrer"
-                className="ci-value ci-link"
-              >
-                @ben.hibbard20 →
-              </a>
+            <div className="contact-item contact-item-profiles">
+              <span className="ci-label">Profiles</span>
+              <div className="profile-links">
+                {PROFILES.map((p) => (
+                  <a
+                    key={p.name}
+                    href={p.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="profile-link"
+                    title={p.title}
+                  >
+                    <span className="profile-icon" aria-hidden="true">
+                      {p.icon}
+                    </span>
+                    <span className="profile-name">{p.name}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
