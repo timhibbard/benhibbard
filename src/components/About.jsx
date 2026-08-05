@@ -15,10 +15,11 @@ export default function About() {
               the importance of consistent hard work both on the track and in the classroom.
             </p>
             <p>
-              Outside of running, I&apos;m passionate about mathematics and computer science. I&apos;m
-              actively involved in my school&apos;s STEM club and enjoy problem-solving challenges
-              that push my thinking. I&apos;m looking to compete at the NCAA Division I or II level
-              while pursuing a degree in engineering or computer science.
+              In the classroom I carry a demanding schedule — three AP courses and six Honors
+              courses as a junior, including AP Computer Science, AP Physics 1, and AP US
+              History — while maintaining a 4.728 weighted GPA. I&apos;m looking to compete at
+              the NCAA Division I or II level while pursuing a degree in engineering or
+              computer science.
             </p>
             <p>
               I&apos;m seeking a program that values both athletic excellence and academic rigor —

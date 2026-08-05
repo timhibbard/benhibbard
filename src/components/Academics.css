@@ -16,15 +16,25 @@
 }
 
 .acad-num {
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: 3.2rem;
   font-weight: 700;
-  color: #0c7eff;
+  color: #0a2540;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+}
+
+.acad-num-sub {
+  font-size: 0.5em;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0;
 }
 
 .acad-desc {
   font-size: 0.85rem;
-  color: #888;
+  color: #6b7280;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -71,21 +81,30 @@
 
 .course-name {
   font-size: 0.95rem;
-  color: #0c7eff;
+  color: #0a2540;
   font-weight: 600;
 }
 
 .course-semester {
   font-size: 0.78rem;
-  color: #aaa;
+  color: #6b7280;
 }
 
 .course-grade {
-  font-size: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #ff0000;
-  min-width: 36px;
+  color: #0a6fe0;
+  min-width: 48px;
   text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.course-note {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: 0.8rem;
+  line-height: 1.5;
 }
 
 /* Honors */
@@ -110,13 +129,13 @@
 
 .honor-title {
   font-size: 0.95rem;
-  color: #0c7eff;
+  color: #0a2540;
   font-weight: 600;
 }
 
 .honor-year {
   font-size: 0.8rem;
-  color: #aaa;
+  color: #6b7280;
   font-weight: 500;
 }
 

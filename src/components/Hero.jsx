@@ -40,7 +40,16 @@ export default function Hero() {
         </div>
       </div>
       <button className="scroll-down" onClick={() => scrollTo('about')} aria-label="Scroll down">
-        <span />
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M6 9.5 12 15.5 18 9.5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </button>
     </section>
   );
