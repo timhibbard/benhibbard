@@ -102,13 +102,30 @@
 }
 
 @media (max-width: 640px) {
+  .navbar {
+    padding: 0.9rem 1.25rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.7rem 1.25rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
   .hamburger {
     display: flex;
+    /* 16px of bars + padding = a 44px square touch target. */
+    padding: 14px 10px;
+    margin: -14px -10px -14px 0;
   }
 
   .nav-links {
     position: fixed;
-    top: 60px;
+    /* Matches the collapsed navbar height so the panel never overlaps it. */
+    top: 51px;
     left: 0;
     right: 0;
     background: rgba(12, 92, 184, 0.97);

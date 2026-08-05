@@ -202,3 +202,59 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 640px) {
+  .contact-intro {
+    font-size: 0.98rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-grid,
+  .form-row,
+  .contact-form {
+    gap: 1.75rem;
+  }
+
+  .form-row,
+  .contact-form {
+    gap: 1rem;
+  }
+
+  /* Label-above-value doubled the panel height for six rows; put them on one
+     line each, matching the About facts panel. */
+  .contact-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.1rem;
+  }
+
+  .contact-item .ci-value {
+    text-align: right;
+    font-size: 0.88rem;
+  }
+
+  /* Pad the links out to a comfortable tap target without changing the
+     row height, since the label next to them sets it. */
+  .contact-item a.ci-value {
+    padding: 0.5rem 0;
+    margin: -0.5rem 0;
+  }
+
+  /* 16px minimum stops iOS Safari from zooming the page on focus. */
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .btn-submit {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .success-msg {
+    padding: 2rem 1.25rem;
+  }
+}

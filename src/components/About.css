@@ -63,3 +63,24 @@
     gap: 2.5rem;
   }
 }
+
+@media (max-width: 640px) {
+  .about-grid {
+    gap: 1.75rem;
+  }
+
+  .about-text p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .fact-item {
+    padding: 0.8rem 1.1rem;
+  }
+
+  .fact-label,
+  .fact-value {
+    font-size: 0.85rem;
+  }
+}

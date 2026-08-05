@@ -190,3 +190,85 @@
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(6px); }
 }
+
+/* Phones: the fixed 100vh hero could not hold this much content, so the
+   subtitle collided with the navbar and the scroll chevron sat on top of
+   the Contact button. Let the section grow instead of clipping, and pack
+   the PR cards into one row rather than three stacked blocks. */
+@media (max-width: 640px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    /* Top pad clears the fixed navbar. */
+    padding: 6rem 0 3.5rem;
+  }
+
+  .hero-content {
+    padding: 0 1.25rem;
+  }
+
+  .hero-subtitle {
+    /* 3px tracking pushed this onto two lines at phone widths. */
+    font-size: 0.78rem;
+    letter-spacing: 1.6px;
+  }
+
+  .hero-name {
+    font-size: clamp(3rem, 13vw, 4rem);
+  }
+
+  .hero-school {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .stat-card {
+    min-width: 0;
+    padding: 0.7rem 0.4rem;
+    border-radius: 10px;
+  }
+
+  .stat-value {
+    /* 16:29.49 is the widest string; ~3.1em in Barlow Condensed. */
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+  }
+
+  .hero-actions {
+    gap: 0.7rem;
+  }
+
+  /* Sit side by side when there is room, stack on very narrow screens. */
+  .btn-primary,
+  .btn-secondary {
+    flex: 1 1 130px;
+    padding: 0.85rem 1rem;
+  }
+
+  /* Swiping is the native scroll affordance here, and the circle was
+     overlapping the buttons once the hero grew. */
+  .scroll-down {
+    display: none;
+  }
+}
+
+/* Below ~360px the two buttons can't sit side by side without "View
+   Athletics" wrapping onto two lines, so stack them full width. */
+@media (max-width: 380px) {
+  .btn-primary,
+  .btn-secondary {
+    flex: 1 1 100%;
+  }
+}

@@ -207,17 +207,59 @@
   }
 }
 
-@media (max-width: 480px) {
-  .pr-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .pr-block,
+  .seasons-block,
+  .training-block {
+    margin-bottom: 2.25rem;
+  }
+
+  .pr-grid-featured {
+    gap: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .pr-card-featured {
+    padding: 1.2rem 1rem 1rem;
   }
 
   .pr-card-featured .pr-time {
     font-size: 2.6rem;
   }
 
+  /* Two per row keeps the secondary PRs from becoming a long scroll. */
+  .pr-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+
+  .pr-card {
+    padding: 1.1rem 0.7rem;
+  }
+
+  .pr-time {
+    font-size: 1.55rem;
+  }
+
+  .pr-event {
+    font-size: 0.72rem;
+    letter-spacing: 0.6px;
+  }
+
+  .seasons-grid {
+    gap: 0.9rem;
+  }
+
+  .season-card {
+    padding: 1.2rem;
+  }
+
   .training-stats {
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.25rem 2rem;
+  }
+
+  .t-num {
+    font-size: 2.3rem;
   }
 }

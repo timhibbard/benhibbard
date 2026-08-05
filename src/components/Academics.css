@@ -149,3 +149,46 @@
     gap: 2rem;
   }
 }
+
+@media (max-width: 640px) {
+  /* Four stats in a flex row wrapped into a ragged 3+1; a 2×2 grid reads
+     as a deliberate block and halves the height. */
+  .acad-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .acad-num {
+    font-size: 2.5rem;
+  }
+
+  .acad-desc {
+    font-size: 0.78rem;
+    letter-spacing: 0.3px;
+  }
+
+  .acad-grid {
+    gap: 2rem;
+  }
+
+  .course-row,
+  .honor-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .course-name,
+  .honor-title {
+    font-size: 0.9rem;
+  }
+
+  .course-grade {
+    font-size: 1.3rem;
+    min-width: 40px;
+  }
+
+  .honors-list {
+    gap: 0.6rem;
+  }
+}

@@ -24,6 +24,9 @@ body {
 
 .section {
   padding: 6rem 0;
+  /* The navbar is fixed, so a bare anchor jump lands the heading underneath
+     it. Offset the scroll target by roughly the navbar's height. */
+  scroll-margin-top: 72px;
 }
 
 .container {
@@ -60,4 +63,21 @@ body {
   letter-spacing: 0.5px;
   color: #0a2540;
   margin-bottom: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  /* 6rem of vertical padding and 2rem of gutter are desktop-scale; on a
+     phone they waste most of the viewport. */
+  .section {
+    padding: 3.5rem 0;
+    scroll-margin-top: 56px;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.75rem;
+  }
 }
