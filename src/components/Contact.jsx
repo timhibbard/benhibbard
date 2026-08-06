@@ -48,6 +48,23 @@ const PROFILES = [
   },
 ];
 
+// Both coaches gave permission to be listed publicly. Coach-to-coach contact is
+// a normal part of recruiting, so these sit in Contact rather than Athletics.
+const COACHES = [
+  {
+    name: 'Evan Jones',
+    role: 'Head Coach',
+    program: 'J.L. Mann Cross Country & Track',
+    email: 'mannhsxc@gmail.com',
+  },
+  {
+    name: 'Marshall Barron',
+    role: 'Assistant Coach',
+    program: 'J.L. Mann Cross Country & Track',
+    email: 'patriotsxc98@gmail.com',
+  },
+];
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -245,6 +262,26 @@ export default function Contact() {
                 </button>
               </form>
             )}
+          </div>
+        </div>
+
+        <div className="coaches-block">
+          <h3 className="block-heading">Coach References</h3>
+          <p className="coaches-intro">
+            My high school coaches have agreed to speak with college programs about my
+            training, racing and character. Please feel free to contact them directly.
+          </p>
+          <div className="coaches-grid">
+            {COACHES.map((c) => (
+              <div key={c.email} className="coach-card">
+                <span className="coach-role">{c.role}</span>
+                <span className="coach-name">{c.name}</span>
+                <span className="coach-program">{c.program}</span>
+                <a href={`mailto:${c.email}`} className="coach-email">
+                  {c.email}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -241,6 +241,77 @@
   font-weight: 500;
 }
 
+/* Coaches — a supporting credential below the form, so the primary path
+   (contact Ben) still comes first. */
+.coaches-block {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.coaches-intro {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  /* .block-heading carries its own 1.2rem bottom margin. */
+  margin-top: -0.4rem;
+}
+
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.coach-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f8f9fc;
+}
+
+.coach-role {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.coach-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #0a2540;
+  line-height: 1.15;
+}
+
+.coach-program {
+  font-size: 0.88rem;
+  color: #4b5563;
+  margin-bottom: 0.55rem;
+}
+
+.coach-email {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0a6fe0;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: color 0.2s;
+}
+
+.coach-email:hover {
+  color: #c81e1e;
+}
+
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -248,6 +319,10 @@
   }
 
   .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .coaches-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -313,5 +388,29 @@
 
   .success-msg {
     padding: 2rem 1.25rem;
+  }
+
+  .coaches-block {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .coaches-intro {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .coaches-grid {
+    gap: 0.9rem;
+  }
+
+  .coach-card {
+    padding: 1.1rem 1.2rem;
+  }
+
+  /* Long addresses would otherwise overflow the card on a narrow phone. */
+  .coach-email {
+    font-size: 0.9rem;
+    word-break: break-word;
   }
 }
