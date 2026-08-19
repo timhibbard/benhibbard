@@ -162,6 +162,10 @@ export default function Contact() {
               <span className="ci-label">Grad Year</span>
               <span className="ci-value">Spring 2027</span>
             </div>
+            <div className="contact-item">
+              <span className="ci-label">NCAA ID</span>
+              <span className="ci-value">2607114311</span>
+            </div>
             <div className="contact-item contact-item-profiles">
               <span className="ci-label">Profiles</span>
               <div className="profile-links">
