@@ -17,10 +17,10 @@ const primaryRecords = [
   },
   {
     event: '5K — Cross Country',
-    time: '16:29.49',
-    meet: 'Woodmont Invitational',
-    year: '2025',
-    note: '5A D1 state champion team',
+    time: '15:55.10',
+    meet: 'Eye Opener',
+    year: '2026',
+    note: '34 seconds off my previous best',
   },
 ];
 
@@ -33,6 +33,16 @@ const otherRecords = [
 ];
 
 const seasons = [
+  {
+    season: 'Cross Country',
+    highlights: [
+      '2026: 5K PR of 15:55.10 at the Eye Opener — 8th overall',
+      '2026: 34 seconds faster than my 2025 best',
+      '2025: Won the SCHSL 5A Division 1 team state championship with J.L. Mann',
+      '2025: 20th at the Region 1-5A Championship',
+      '2025: 35th at the Ed Boehmke Greenville County Championships',
+    ],
+  },
   {
     season: 'Outdoor Track 2026',
     highlights: [
@@ -49,16 +59,6 @@ const seasons = [
       '3rd in the 3000m at the Eye of the Tiger Invitational (9:36.03)',
       '6th in South Carolina — 3000m',
       'Indoor Mile PR of 4:49.85',
-    ],
-  },
-  {
-    season: 'Cross Country 2025',
-    highlights: [
-      'Won the SCHSL 5A Division 1 team state championship with J.L. Mann',
-      '5K PR of 16:29.49 at the Woodmont Invitational',
-      '20th at the Region 1-5A Championship',
-      '35th at the Ed Boehmke Greenville County Championships',
-      'Cut 18+ seconds off my 5K from the prior season',
     ],
   },
 ];
