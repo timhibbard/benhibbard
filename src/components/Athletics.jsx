@@ -20,7 +20,7 @@ const primaryRecords = [
     time: '15:55.10',
     meet: 'Eye Opener',
     year: '2026',
-    note: '34 seconds off my previous best',
+    note: '8th in International Boys',
   },
 ];
 
@@ -36,8 +36,7 @@ const seasons = [
   {
     season: 'Cross Country',
     highlights: [
-      '2026: 5K PR of 15:55.10 at the Eye Opener — 8th overall',
-      '2026: 34 seconds faster than my 2025 best',
+      '2026: 5K PR of 15:55.10 at the Eye Opener — 8th in International Boys',
       '2025: Won the SCHSL 5A Division 1 team state championship with J.L. Mann',
       '2025: 20th at the Region 1-5A Championship',
       '2025: 35th at the Ed Boehmke Greenville County Championships',
