@@ -27,7 +27,7 @@ export default function Hero() {
               <span className="stat-label">3200m</span>
             </div>
             <div className="stat-card">
-              <span className="stat-value">15:55.10</span>
+              <span className="stat-value">15:40.34</span>
               <span className="stat-label">5K XC</span>
             </div>
           </div>
