@@ -17,10 +17,10 @@ const primaryRecords = [
   },
   {
     event: '5K — Cross Country',
-    time: '15:55.10',
-    meet: 'Eye Opener',
+    time: '15:40.34',
+    meet: 'Yellow Jacket Invitational',
     year: '2026',
-    note: '8th in International Boys',
+    note: '3rd of 196 in Boys 5K',
   },
 ];
 
@@ -36,7 +36,8 @@ const seasons = [
   {
     season: 'Cross Country',
     highlights: [
-      '2026: 5K PR of 15:55.10 at the Eye Opener — 8th in International Boys',
+      '2026: 5K PR of 15:40.34 at the Yellow Jacket Invitational — 3rd of 196, J.L. Mann won the team title',
+      '2026: 8th in International Boys at the Eye Opener (15:55.10)',
       '2025: Won the SCHSL 5A Division 1 team state championship with J.L. Mann',
       '2025: 20th at the Region 1-5A Championship',
       '2025: 35th at the Ed Boehmke Greenville County Championships',
