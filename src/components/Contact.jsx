@@ -14,7 +14,7 @@ const ACCESS_KEYS = (import.meta.env.VITE_WEB3FORMS_KEYS || '')
 const PROFILES = [
   {
     name: 'MileSplit',
-    title: 'MileSplit profile — official race results',
+    title: 'MileSplit profile: official race results',
     href: 'https://sc.milesplit.com/athletes/15024264-ben-hibbard',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
@@ -26,7 +26,7 @@ const PROFILES = [
   },
   {
     name: 'Strava',
-    title: 'Strava — training log',
+    title: 'Strava: training log',
     href: 'https://www.strava.com/athletes/112947404',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor">
@@ -36,7 +36,7 @@ const PROFILES = [
   },
   {
     name: 'Instagram',
-    title: 'Instagram — @ben.hibbard20',
+    title: 'Instagram: @ben.hibbard20',
     href: 'https://www.instagram.com/ben.hibbard20/',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
