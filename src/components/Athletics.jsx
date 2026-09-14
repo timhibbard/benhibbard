@@ -4,7 +4,7 @@ const primaryRecords = [
   {
     event: '1600m',
     time: '4:21.44',
-    meet: 'Region 1 — 5A Meet',
+    meet: 'Region 1-5A Meet',
     year: '2026',
     note: 'Top 30% of D1 juniors',
   },
@@ -16,7 +16,7 @@ const primaryRecords = [
     note: '48th in South Carolina',
   },
   {
-    event: '5K — Cross Country',
+    event: '5K Cross Country',
     time: '15:40.34',
     meet: 'Yellow Jacket Invitational',
     year: '2026',
@@ -27,8 +27,8 @@ const primaryRecords = [
 const otherRecords = [
   { event: '1500m', time: '4:13.42', meet: 'Bojangles Blazer Twilight', year: '2026' },
   { event: '1 Mile', time: '4:25.09', meet: 'ASICS Carolina Distance Carnival', year: '2026' },
-  { event: '3000m — Indoor', time: '9:36.03', meet: 'Eye of the Tiger Invitational', year: '2026' },
-  { event: '1 Mile — Indoor', time: '4:49.85', meet: 'Eye of the Tiger Invitational', year: '2026' },
+  { event: '3000m Indoor', time: '9:36.03', meet: 'Eye of the Tiger Invitational', year: '2026' },
+  { event: '1 Mile Indoor', time: '4:49.85', meet: 'Eye of the Tiger Invitational', year: '2026' },
   { event: '800m', time: '2:16.17', meet: 'Mauldin Meet #2', year: '2025' },
 ];
 
@@ -36,7 +36,7 @@ const seasons = [
   {
     season: 'Cross Country',
     highlights: [
-      '2026: 5K PR of 15:40.34 at the Yellow Jacket Invitational — 3rd of 196, J.L. Mann won the team title',
+      '2026: 5K PR of 15:40.34 at the Yellow Jacket Invitational, 3rd of 196 as J.L. Mann won the team title',
       '2026: 8th in International Boys at the Eye Opener (15:55.10)',
       '2025: Won the SCHSL 5A Division 1 team state championship with J.L. Mann',
       '2025: 20th at the Region 1-5A Championship',
@@ -46,18 +46,18 @@ const seasons = [
   {
     season: 'Outdoor Track 2026',
     highlights: [
-      '1500m PR of 4:13.42 — 11th in South Carolina',
-      '4th in the 1600m at the Region 1 — 5A Meet (4:21.44)',
+      '1500m PR of 4:13.42, 11th in South Carolina',
+      '4th in the 1600m at the Region 1-5A Meet (4:21.44)',
       '11th in the 1600m at the SCHSL 5A Division 1 State Championships',
-      '4th in the 1600m at SCHSL 5A — D1 Upper State',
-      'Competed at RunningLane Track Championships — 8th in the Mile',
+      '4th in the 1600m at SCHSL 5A D1 Upper State',
+      'Competed at RunningLane Track Championships, 8th in the Mile',
     ],
   },
   {
     season: 'Indoor Track 2026',
     highlights: [
       '3rd in the 3000m at the Eye of the Tiger Invitational (9:36.03)',
-      '6th in South Carolina — 3000m',
+      '6th in South Carolina in the 3000m',
       'Indoor Mile PR of 4:49.85',
     ],
   },
